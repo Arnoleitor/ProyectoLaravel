@@ -15,10 +15,10 @@ class CreatePartyTable extends Migration
     {
         Schema::create('party', function (Blueprint $table) {
             $table->id();
-            $table->String('nombre',20);
-            $table->String('jugadores');
-            $table->String('idgrupo');
-            $table->String('idjuego');
+            $table->String('nombre',100);
+            $table->String('jugadores',100);
+            $table->String('idgrupo',100);
+            $table->String('idjuego',100);
             $table->timestamps();
         });
     }
