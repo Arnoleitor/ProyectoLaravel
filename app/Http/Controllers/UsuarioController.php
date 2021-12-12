@@ -30,15 +30,15 @@ class UsuarioController extends Controller
 
         try {
 
-            return Message::create(
+            return Usuario::create(
                 [
                     'email' => $email,
                     'nombre' => $nombre,
                     'password' => $password,
-                    'password' => $tipo,
-                    'password' => $raza,
-                    'password' => $edad,
-                    'password' => $localidad,
+                    'tipo' => $tipo,
+                    'raza' => $raza,
+                    'edad' => $edad,
+                    'localidad' => $localidad,
                 ]
                 );
 
