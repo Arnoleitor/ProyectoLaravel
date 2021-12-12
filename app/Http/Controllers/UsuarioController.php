@@ -110,6 +110,41 @@ class UsuarioController extends Controller
                 return "Error $codigoError";
             }
         }
+        
+    }
+
+    ////////////////Borrar Usuarios ////////////////
+    public function DeleteUsuarios(Request $request){
+
+        $id = $request->input('id');
+
+        try {
+            //BUSCA EL PLAYER POR ID. SI EXISTE, BORRA EL PLAYER. SI NO, SACA MENSAJE DE ERROR
+            $arrayUsuario = Usuario::all()
+            ->where('id', '=', $id);
+
+            $Usuario = Usuario::where('id', '=', $id);
+            
+            if (count($arrayPlayer) == 0) {
+                return response()->json([
+                    "data" => $arrayPlayer,
+                    "message" => "No se ha encontrado el Usuario"
+                ]);
+            }else{
+                $Usuario->delete();
+                return response()->json([
+                    "data" => $arrayUsuario,
+                    "message" => "Usuario borrado correctamente"
+                ]);
+            }
+
+        } catch (QueryException $error) {
+
+            $codigoError = $error->errorInfo[1];
+            if($codigoError){
+                return "Error $codigoError";
+            }
+        }
     }
 }
     
