@@ -91,6 +91,23 @@ class UsuarioController extends Controller
 
         }
     }
+    public function UsuariosByID(Request $request){
+
+        $id = $request->input('id');
+
+        try {
+            $Usuario = Usuarios::all()
+            ->where('id', "=", $id);
+            return $Usuario;
+
+        } catch (QueryException $error) {
+
+            $codigoError = $error->errorInfo[1];
+            if($codigoError){
+                return "Error $codigoError";
+            }
+        }
+    }
 }
     
 // public function showProfile(Request $request){
