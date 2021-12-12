@@ -18,6 +18,7 @@ class UsuarioController extends Controller
             return $error;
         }
     }
+    ////////////////Crear Usuarios////////////////
     public function addUsuarios(Request $request){//sin id y sin fecha
 
         $email = $request->input('email');
@@ -53,7 +54,16 @@ class UsuarioController extends Controller
         }
         
     }
+   ////////////////Modificar Usuarios////////////////
     public function UpdateUsuarios (Request $request){
+
+        $email = $request->input('email');
+        $nombre = $request->input('nombre');
+        $password = $request->input('password');
+        $tipo = $request->input('tipo');
+        $raza = $request->input('raza');
+        $edad = $request->input('edad');
+        $localidad = $request->input('localidad');
 
 
         try {
