@@ -68,7 +68,7 @@ class UsuarioController extends Controller
 
         try {
 
-            $Usuario = Usuarios::where('id', '=', $id)
+            $Usuario = Usuario::where('id', '=', $id)
             ->update(
                 [
                     'email' => $email,
@@ -98,9 +98,9 @@ class UsuarioController extends Controller
         $id = $request->input('id');
 
         try {
-            $Usuarios = Usuario::all()
+            $Usuario = Usuario::all()
             ->where('id', "=", $id);
-            return $Usuarios;
+            return $Usuario;
 
         } catch (QueryException $error) {
 

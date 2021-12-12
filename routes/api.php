@@ -20,5 +20,6 @@ use App\Http\Controllers\UsuarioController;
 
 Route::get('Usuarios', [UsuarioController::class, "showAllUsuario"]);
 Route::post('Usuarios', [UsuarioController::class, "addUsuarios"]);
+Route::post('UsuariosByID', [UsuarioController::class, "showAllUsuario"]);
 Route::put('Usuarios', [UsuarioController::class, "UpdateUsuarios"]);
 // Route::delete('Usuarios', [UsuarioController::class, "addUsuarios"]);
