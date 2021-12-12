@@ -12,12 +12,13 @@ class UsuarioController extends Controller
 
         try 
             
-            return Usuario::all();
+        return Usuario::all();
 
         } catch(QueryException $error) {
             return $error;
         }
-}
+    }
+    
 public function showProfile(Request $request){
 
     $id = $request->input('id');
