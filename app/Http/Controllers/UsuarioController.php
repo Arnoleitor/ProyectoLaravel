@@ -91,14 +91,16 @@ class UsuarioController extends Controller
 
         }
     }
+       ////////////////Busqueda por ID Usuarios////////////////
+
     public function UsuariosByID(Request $request){
 
         $id = $request->input('id');
 
         try {
-            $Usuario = Usuarios::all()
+            $Usuarios = Usuario::all()
             ->where('id', "=", $id);
-            return $Usuario;
+            return $Usuarios;
 
         } catch (QueryException $error) {
 
