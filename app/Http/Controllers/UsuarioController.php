@@ -125,9 +125,9 @@ class UsuarioController extends Controller
 
             $Usuario = Usuario::where('id', '=', $id);
             
-            if (count($arrayPlayer) == 0) {
+            if (count($arrayUsuario) == 0) {
                 return response()->json([
-                    "data" => $arrayPlayer,
+                    "data" => $arrayUsuario,
                     "message" => "No se ha encontrado el Usuario"
                 ]);
             }else{
