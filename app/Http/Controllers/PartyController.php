@@ -10,7 +10,7 @@ class PartyController extends Controller
 
 {
     //
-    public function party (Request $request){
+    public function nuevaparty (Request $request){
 
         $nombre = $request->input('nombre');
         $jugadores = $request->input('jugadores');
