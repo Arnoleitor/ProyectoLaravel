@@ -51,7 +51,32 @@ class UsuarioController extends Controller
                 ]);
             
         }
+        
+    }
+    public function UpdateUsuarios (Request $request){
 
+
+        try {
+
+            return Usuario::UpdateUsuarios(
+                [
+                    'email' => $email,
+                    'nombre' => $nombre,
+                    'password' => $password,
+                    'tipo' => $tipo,
+                    'raza' => $raza,
+                    'edad' => $edad,
+                    'localidad' => $localidad,
+                ]
+                );
+
+        } catch (QueryException $error) {
+            $codigoError = $error->errorInfo[1];
+            if($codigoError){
+                return "Error $codigoError";
+            }
+
+        }
     }
 }
     
