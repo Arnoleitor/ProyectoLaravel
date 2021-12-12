@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Usuario;
+use App\Http\Controllers\UsuarioController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,5 +18,5 @@ use App\Http\Controllers\Usuario;
 //     return $request->usuario();
 // });
 
-Route::get('Usuarios', [Usuario::class, "showAllUsuario"]);
-Route::post('Usuarios', [Usuario::class, "showAllUsuario"]);
+Route::get('Usuarios', [UsuarioController::class, "showAllUsuario"]);
+Route::post('Usuarios', [UsuarioController::class, "showAllUsuario"]);
