@@ -18,7 +18,7 @@ class PartyController extends Controller
 
         try {
 
-            return party::create(
+            return Party::create(
                 [
                     'nombre' => $nombre,
                     'jugadores' => $jugadores,
