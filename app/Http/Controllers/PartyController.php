@@ -24,13 +24,14 @@ class PartyController extends Controller
                     'nombre' => $nombre,
                     'jugadores' => $jugadores,
                     'idgrupo' => $idgrupo,
-                    'idjuego' => $idjuego
+                    'idjuego' => $idjuego,
                 ]
             );
 
         } catch (QueryException $error) {
             echo"error";
             $codigoError = $error->errorInfo[1];
+
             if($codigoError){
                 return "Error $codigoError";
             }
