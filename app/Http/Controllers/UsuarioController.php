@@ -18,6 +18,41 @@ class UsuarioController extends Controller
             return $error;
         }
     }
+    public function addUsuarios(Request $request){//sin id y sin fecha
+
+        $email = $request->input('email');
+        $nombre = $request->input('nombre');
+        $password = $request->input('password');
+        $tipo = $request->input('tipo');
+        $raza = $request->input('raza');
+        $edad = $request->input('edad');
+        $localidad = $request->input('localidad');
+
+        try {
+
+            return Message::create(
+                [
+                    'email' => $email,
+                    'nombre' => $nombre,
+                    'password' => $password,
+                    'password' => $tipo,
+                    'password' => $raza,
+                    'password' => $edad,
+                    'password' => $localidad,
+                ]
+                );
+
+        } catch (QueryException $error) {
+            $codigoError = $error->errorInfo[1];
+
+            
+                return response()->json([
+                    'error' => $codigoError
+                ]);
+            
+        }
+
+    }
 }
     
 // public function showProfile(Request $request){
