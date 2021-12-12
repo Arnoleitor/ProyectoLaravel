@@ -14,7 +14,7 @@ class CreatePartyTable extends Migration
     public function up()
     {
         Schema::create('party', function (Blueprint $table) {
-            $table->increments('id');
+            
             $table->String('nombre',20);
             $table->String('jugadores');
             $table->String('idgrupo');
