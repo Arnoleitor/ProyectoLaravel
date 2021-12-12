@@ -17,9 +17,11 @@ use App\Http\Controllers\UsuarioController;
 // Route::middleware('auth:sanctum')->get('/usuario', function (Request $request) {
 //     return $request->usuario();
 // });
-
+//USUARIOS
 Route::get('Usuarios', [UsuarioController::class, "showAllUsuario"]);
 Route::post('Usuarios', [UsuarioController::class, "addUsuarios"]);
 Route::post('UsuariosByID', [UsuarioController::class, "UsuariosByID"]);
 Route::put('Usuarios', [UsuarioController::class, "UpdateUsuarios"]);
 Route::delete('Usuarios', [UsuarioController::class, "DeleteUsuarios"]);
+//PARTYS
+Route::post('newParty', [PartyController::class, "partyAdd"]);
