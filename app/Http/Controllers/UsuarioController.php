@@ -68,7 +68,8 @@ class UsuarioController extends Controller
 
         try {
 
-            return Usuario::UpdateUsuarios(
+            $Usuario = Usuarios::where('id', '=', $id)
+            ->update(
                 [
                     'email' => $email,
                     'nombre' => $nombre,
@@ -79,6 +80,8 @@ class UsuarioController extends Controller
                     'localidad' => $localidad,
                 ]
                 );
+                return Usuarios::all()
+                ->where('id', "=", $id);
 
         } catch (QueryException $error) {
             $codigoError = $error->errorInfo[1];
