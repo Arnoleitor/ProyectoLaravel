@@ -19,4 +19,4 @@ use App\Http\Controllers\UsuarioController;
 // });
 
 Route::get('Usuarios', [UsuarioController::class, "showAllUsuario"]);
-Route::post('Usuarios', [UsuarioController::class, "showAllUsuario"]);
+Route::post('Usuarios', [UsuarioController::class, "addUsuarios"]);
