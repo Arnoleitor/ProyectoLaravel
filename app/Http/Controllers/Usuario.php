@@ -10,7 +10,7 @@ class UsuarioController extends Controller
     //
     public function showAllUsuario(){
 
-        try 
+        try {
             
         return Usuario::all();
 
@@ -25,7 +25,7 @@ public function showProfile(Request $request){
 
     try {
 
-        return User::all()->where('id', '=', $id)
+        return Usuario::all()->where('id', '=', $id)
         ->makeHidden(['password'])->keyBy('id');
 
     } catch (QueryException $error) {
