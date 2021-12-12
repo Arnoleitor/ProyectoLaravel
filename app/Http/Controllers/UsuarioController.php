@@ -57,6 +57,7 @@ class UsuarioController extends Controller
    ////////////////Modificar Usuarios////////////////
     public function UpdateUsuarios (Request $request){
 
+        $id = $request->input('id');
         $email = $request->input('email');
         $nombre = $request->input('nombre');
         $password = $request->input('password');
@@ -80,7 +81,7 @@ class UsuarioController extends Controller
                     'localidad' => $localidad,
                 ]
                 );
-                return Usuarios::all()
+                return Usuario::all()
                 ->where('id', "=", $id);
 
         } catch (QueryException $error) {
