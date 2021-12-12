@@ -19,7 +19,7 @@ class PartyController extends Controller
 
         try {
 
-            return party::create(
+            return Party::create(
                 [
                     'nombre' => $nombre,
                     'jugadores' => $jugadores,
@@ -29,7 +29,7 @@ class PartyController extends Controller
             );
 
         } catch (QueryException $error) {
-
+            echo"error";
             $codigoError = $error->errorInfo[1];
             if($codigoError){
                 return "Error $codigoError";
