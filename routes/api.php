@@ -25,4 +25,4 @@ Route::post('UsuariosByID', [UsuarioController::class, "UsuariosByID"]);
 Route::put('Usuarios', [UsuarioController::class, "UpdateUsuarios"]);
 Route::delete('Usuarios', [UsuarioController::class, "DeleteUsuarios"]);
 //PARTYS
-Route::post('nuevaParty', [PartyController::class, "nuevaparty"]);
+Route::post('party', [PartyController::class, "party"]);
