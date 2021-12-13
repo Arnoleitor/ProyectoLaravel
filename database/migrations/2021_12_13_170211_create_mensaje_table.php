@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePartiesTable extends Migration
+class CreateMensajeTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,21 +13,22 @@ class CreatePartiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('parties', function (Blueprint $table) {
+        Schema::create('mensaje', function (Blueprint $table) {
             $table->id();
-            $table->String('nombre',100);
-            $table->unsignedInteger('idusuario')
+            $table->unsignedInteger('idusuario');
+            $table->foreign('idusuario')
             ->references('id')
             ->on('usuarios')
             ->unsigned()
             ->constrained('usuarios')
             ->onUpdate('cascade')
             ->onDelete('cascade');
-            $table->unsignedInteger('idjuego')
+            $table->unsignedInteger('idparty');
+            $table->foreign('idusuario')
             ->references('id')
-            ->on('juegos')
+            ->on('parties')
             ->unsigned()
-            ->constrained('juegos')
+            ->constrained('parties')
             ->onUpdate('cascade')
             ->onDelete('cascade');
             $table->timestamps();
@@ -41,6 +42,6 @@ class CreatePartiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('parties');
+        Schema::dropIfExists('chats');
     }
 }
