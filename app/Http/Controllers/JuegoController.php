@@ -8,7 +8,7 @@ use App\Models\Juego;
 class JuegoController extends Controller
 
 {
-    
+    //CREAR JUEGOS//
     public function createJuego (Request $request){
 
         $nombre = $request->input('nombre');
@@ -71,7 +71,7 @@ class JuegoController extends Controller
         //ACTUALIZAR JUEGOS//
         public function updateJuego (Request $request){
 
-            
+            $id = $request->input('id');
             $nombre = $request->input('email');
             $compania = $request->input('compania');
             $descripcion = $request->input('descripcion');
