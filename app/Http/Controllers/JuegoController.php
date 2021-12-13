@@ -56,7 +56,7 @@ class JuegoController extends Controller
         
     }
     
-        //
+        //VER TODOS LOS JUEGOS//
         public function showAllJuego(){
     
             try {
@@ -65,6 +65,39 @@ class JuegoController extends Controller
     
             } catch(QueryException $error) {
                 return $error;
+            }
+        }
+
+        //ACTUALIZAR JUEGOS//
+        public function updateJuego (Request $request){
+
+            
+            $nombre = $request->input('email');
+            $compania = $request->input('compania');
+            $descripcion = $request->input('descripcion');
+            
+    
+    
+            try {
+    
+                $Juego = Juego::where('id', '=', $id)
+                ->update(
+                    [
+                        'nombre' => $nombre,
+                        'compania' => $compania,
+                        'descripcion' => $descripcion,
+                       
+                    ]
+                    );
+                    return Juego::all()
+                    ->where('id', "=", $id);
+    
+            } catch (QueryException $error) {
+                $codigoError = $error->errorInfo[1];
+                if($codigoError){
+                    return "Error $codigoError";
+                }
+    
             }
         }
 }
