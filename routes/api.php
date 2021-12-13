@@ -25,7 +25,7 @@ Route::get('Usuarios', [UsuarioController::class, "showAllUsuario"]);
 Route::post('Usuarios', [UsuarioController::class, "addUsuarios"]);
 Route::get('Usuarios/{id}', [UsuarioController::class, "UsuariosByID"]);
 Route::put('Usuarios', [UsuarioController::class, "UpdateUsuarios"]);
-Route::delete('Usuarios', [UsuarioController::class, "DeleteUsuarios"]);
+Route::delete('Usuarios/{id}', [UsuarioController::class, "DeleteUsuarios"]);
 //PARTYS
 Route::post('nuevaparty', [PartyController::class, "nuevaparty"]);
 //JUEGO
