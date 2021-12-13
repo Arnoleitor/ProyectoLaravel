@@ -96,7 +96,7 @@ class UsuarioController extends Controller
 
     public function UsuariosByID(Request $request){
 
-        $id = $request->input('id');
+        $id = $request->query('id');
 
         try {
             $Usuario = Usuario::all()
@@ -116,7 +116,7 @@ class UsuarioController extends Controller
     ////////////////Borrar Usuarios ////////////////
     public function DeleteUsuarios(Request $request){
 
-        $id = $request->query('id');
+        $id = $request->input('id');
 
         try {
             //BUSCA EL PLAYER POR ID. SI EXISTE, BORRA EL PLAYER. SI NO, SACA MENSAJE DE ERROR
