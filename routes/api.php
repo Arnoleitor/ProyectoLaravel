@@ -23,7 +23,7 @@ use App\Http\Controllers\MensajeController;
 //USUARIOS
 Route::get('Usuarios', [UsuarioController::class, "showAllUsuario"]);
 Route::post('Usuarios', [UsuarioController::class, "addUsuarios"]);
-Route::get('UsuariosByID', [UsuarioController::class, "UsuariosByID"]);
+Route::get('Usuarios/{id}', [UsuarioController::class, "UsuariosByID"]);
 Route::put('Usuarios', [UsuarioController::class, "UpdateUsuarios"]);
 Route::delete('Usuarios', [UsuarioController::class, "DeleteUsuarios"]);
 //PARTYS
