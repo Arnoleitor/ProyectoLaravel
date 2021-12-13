@@ -96,7 +96,7 @@ class UsuarioController extends Controller
 
     public function UsuariosByID(Request $request){
 
-        $id = $request->get('id');
+        $id = $request->only('id');
 
         try {
             $Usuario = Usuario::all()
