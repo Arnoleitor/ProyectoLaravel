@@ -94,7 +94,7 @@ class UsuarioController extends Controller
     }
        ////////////////Busqueda por ID Usuarios (postman /UsuariosByID y meter ID en body) ////////////////
 
-    public function UsuariosByID(Request $request){
+    public function UsuariosByID(Request $request,$id){
 
         $id = $request->only('id');
 
