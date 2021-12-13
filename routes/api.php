@@ -26,3 +26,5 @@ Route::put('Usuarios', [UsuarioController::class, "UpdateUsuarios"]);
 Route::delete('Usuarios', [UsuarioController::class, "DeleteUsuarios"]);
 //PARTYS
 Route::post('nuevaparty', [PartyController::class, "nuevaparty"]);
+//JUEGO
+Route::post('juego', [PartyController::class, "juego"]);
