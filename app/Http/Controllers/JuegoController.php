@@ -37,6 +37,36 @@ class JuegoController extends Controller
            
         }
     }
+    //BUSCAR JUEGOS POR ID//
+    public function showJuegoByID($id){
+
+
+        try {
+            $Juego = Juego::all()
+            ->where('id', "=", $id);
+            return $Juego;
+
+        } catch (QueryException $error) {
+
+            $codigoError = $error->errorInfo[1];
+            if($codigoError){
+                return "Error $codigoError";
+            }
+        }
+        
+    }
+    
+        //
+        public function showAllJuego(){
+    
+            try {
+                
+            return Juego::all();
+    
+            } catch(QueryException $error) {
+                return $error;
+            }
+        }
 }
 
 

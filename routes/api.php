@@ -35,7 +35,7 @@ Route::put('nuevaparty/{id}', [PartyController::class, "Updateteparty"]);
 //JUEGO--todos
 Route::post('juego', [JuegoController::class, "createJuego"]);
 Route::get('juego', [JuegoController::class, "showAllJuego"]);
-Route::get('juego', [JuegoController::class, "showJuegoByID"]);
+Route::get('juego/{id}', [JuegoController::class, "showJuegoByID"]);
 Route::put('juego', [JuegoController::class, "updateJuego"]);
 Route::delete('juego', [JuegoController::class, "deleteJuego"]);
 //MENSAJES--delete--getbyid buscar por id party

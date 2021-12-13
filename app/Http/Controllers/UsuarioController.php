@@ -92,7 +92,7 @@ class UsuarioController extends Controller
 
         }
     }
-       ////////////////Busqueda por ID Usuarios ////////////////
+    ////////////////Busqueda por ID Usuarios ////////////////
 
     public function UsuariosByID($id){
 
@@ -118,7 +118,7 @@ class UsuarioController extends Controller
         
 
         try {
-            //BUSCA EL PLAYER POR ID. SI EXISTE, BORRA EL PLAYER. SI NO, SACA MENSAJE DE ERROR
+    ////////////////BUSCA EL PLAYER POR ID. SI EXISTE, BORRA EL PLAYER. SI NO, SACA MENSAJE DE ERROR////////////////
             $arrayUsuario = Usuario::all()
             ->where('id', '=', $id);
 
