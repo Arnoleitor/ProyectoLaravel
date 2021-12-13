@@ -9,7 +9,7 @@ class JuegoController extends Controller
 
 {
     
-    public function juego (Request $request){
+    public function createJuego (Request $request){
 
         $nombre = $request->input('nombre');
         $compania = $request->input('compania');
@@ -18,7 +18,7 @@ class JuegoController extends Controller
 
         try {
 
-            return Party::create(
+            return Juego::create(
                 [
                     'nombre' => $nombre,
                     'compania' => $compania,

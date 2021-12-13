@@ -29,6 +29,6 @@ Route::delete('Usuarios/{id}', [UsuarioController::class, "DeleteUsuarios"]);
 //PARTYS
 Route::post('nuevaparty', [PartyController::class, "nuevaparty"]);
 //JUEGO
-Route::post('juego', [JuegoController::class, "juego"]);
+Route::post('juego', [JuegoController::class, "createJuego"]);
 //MENSAJES
 Route::post('createMensaje', [MensajeController::class, "createMensaje"]);
