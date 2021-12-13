@@ -92,9 +92,9 @@ class UsuarioController extends Controller
 
         }
     }
-       ////////////////Busqueda por ID Usuarios (postman /UsuariosByID y meter ID en body) ////////////////
+       ////////////////Busqueda por ID Usuarios ////////////////
 
-    public function UsuariosByID(Request $request,$id){
+    public function UsuariosByID($id){
 
 
         try {
@@ -113,9 +113,9 @@ class UsuarioController extends Controller
     }
 
     ////////////////Borrar Usuarios ////////////////
-    public function DeleteUsuarios(Request $request){
+    public function DeleteUsuarios($id){
 
-        $id = $request->input('id');
+        
 
         try {
             //BUSCA EL PLAYER POR ID. SI EXISTE, BORRA EL PLAYER. SI NO, SACA MENSAJE DE ERROR
