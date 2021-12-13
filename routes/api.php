@@ -26,9 +26,19 @@ Route::post('Usuarios', [UsuarioController::class, "addUsuarios"]);
 Route::get('Usuarios/{id}', [UsuarioController::class, "UsuariosByID"]);
 Route::put('Usuarios', [UsuarioController::class, "UpdateUsuarios"]);
 Route::delete('Usuarios/{id}', [UsuarioController::class, "DeleteUsuarios"]);
-//PARTYS
+//PARTYS --getall,byid del usuario,delete
 Route::post('nuevaparty', [PartyController::class, "nuevaparty"]);
-//JUEGO
+Route::get('nuevaparty', [PartyController::class, "showAllparty"]);
+Route::get('nuevaparty/{id}', [PartyController::class, "showpartyByID"]);
+Route::delete('nuevaparty/{id}', [PartyController::class, "Deleteparty"]);
+Route::put('nuevaparty/{id}', [PartyController::class, "Updateteparty"]);
+//JUEGO--todos
 Route::post('juego', [JuegoController::class, "createJuego"]);
-//MENSAJES
+Route::get('juego', [JuegoController::class, "showAllJuego"]);
+Route::get('juego', [JuegoController::class, "showJuegoByID"]);
+Route::put('juego', [JuegoController::class, "updateJuego"]);
+Route::delete('juego', [JuegoController::class, "deleteJuego"]);
+//MENSAJES--delete--getbyid buscar por id party
 Route::post('createMensaje', [MensajeController::class, "createMensaje"]);
+Route::delete('createMensaje', [MensajeController::class, "deleteMensaje"]);
+Route::get('createMensaje', [MensajeController::class, "MensajebyID"]);
