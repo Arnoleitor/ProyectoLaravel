@@ -24,13 +24,14 @@ class CreateMensajeTable extends Migration
             ->onUpdate('cascade')
             ->onDelete('cascade');
             $table->unsignedInteger('idparty');
-            $table->foreign('idusuario')
+            $table->foreign('idparty')
             ->references('id')
             ->on('parties')
             ->unsigned()
             ->constrained('parties')
             ->onUpdate('cascade')
             ->onDelete('cascade');
+            $table->string('mensaje',200);
             $table->timestamps();
         });
     }

@@ -23,10 +23,12 @@ use App\Http\Controllers\MensajeController;
 //USUARIOS
 Route::get('Usuarios', [UsuarioController::class, "showAllUsuario"]);
 Route::post('Usuarios', [UsuarioController::class, "addUsuarios"]);
-Route::post('UsuariosByID', [UsuarioController::class, "UsuariosByID"]);
+Route::get('UsuariosByID', [UsuarioController::class, "UsuariosByID"]);
 Route::put('Usuarios', [UsuarioController::class, "UpdateUsuarios"]);
 Route::delete('Usuarios', [UsuarioController::class, "DeleteUsuarios"]);
 //PARTYS
 Route::post('nuevaparty', [PartyController::class, "nuevaparty"]);
 //JUEGO
 Route::post('juego', [JuegoController::class, "juego"]);
+//MENSAJES
+Route::post('createMensaje', [MensajeController::class, "createMensaje"]);

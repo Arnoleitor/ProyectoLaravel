@@ -7,18 +7,20 @@ use Illuminate\Http\Request;
 class MensajeController extends Controller
 {
     
-    public function mensaje (Request $request){
+    public function createMensaje (Request $request){
 
-        
+        $idusuario = $request->input('idusuario');
+        $idparty = $request->input('idparty');
         
         
 
         try {
 
-            return Party::create(
+            return Mensaje::create(
                 [
-                    
-                   
+                    'idusuario' => $idusuario,
+                    'party' => $party,
+
                 ]
             );
 
