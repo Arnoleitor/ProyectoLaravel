@@ -13,17 +13,16 @@ class PartyController extends Controller
     public function nuevaparty (Request $request){
 
         $nombre = $request->input('nombre');
-        $jugadores = $request->input('jugadores');
-        $idgrupo = $request->input('idgrupo');
+        $idusuario = $request->input('idusuario');
         $idjuego = $request->input('idjuego');
+        
 
         try {
 
             return Party::create(
                 [
                     'nombre' => $nombre,
-                    'jugadores' => $jugadores,
-                    'idgrupo' => $idgrupo,
+                    'idusuario' => $idusuario,
                     'idjuego' => $idjuego,
                 ]
             );
