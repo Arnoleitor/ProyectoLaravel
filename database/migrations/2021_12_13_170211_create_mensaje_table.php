@@ -15,24 +15,30 @@ class CreateMensajeTable extends Migration
     {
         Schema::create('mensaje', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('idusuario');
-            $table->foreign('idusuario')
-            ->references('id')
-            ->on('usuarios')
-            ->unsigned()
-            ->constrained('usuarios')
-            ->onUpdate('cascade')
-            ->onDelete('cascade');
-            $table->unsignedInteger('idparty');
-            $table->foreign('idparty')
-            ->references('id')
-            ->on('parties')
-            ->unsigned()
-            ->constrained('parties')
-            ->onUpdate('cascade')
-            ->onDelete('cascade');
+            $table->string('idusuario');
+            $table->string('idparty');
             $table->string('mensaje',200);
             $table->timestamps();
+
+            // $table->increments('id');
+            // $table->unsignedInteger('idusuario');
+            // $table->foreign('idusuario')
+            // ->references('id')
+            // ->on('usuarios')
+            // ->unsigned()
+            // ->constrained('usuarios')
+            // ->onUpdate('cascade')
+            // ->onDelete('cascade');
+            // $table->unsignedInteger('idparty');
+            // $table->foreign('idparty')
+            // ->references('id')
+            // ->on('parties')
+            // ->unsigned()
+            // ->constrained('parties')
+            // ->onUpdate('cascade')
+            // ->onDelete('cascade');
+            // $table->string('mensaje',200);
+            // $table->timestamps();
         });
     }
 

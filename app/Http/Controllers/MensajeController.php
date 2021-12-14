@@ -11,6 +11,7 @@ class MensajeController extends Controller
 
         $idusuario = $request->input('idusuario');
         $idparty = $request->input('idparty');
+        $mensaje = $request->input('mensaje');
         
         
 
@@ -20,6 +21,7 @@ class MensajeController extends Controller
                 [
                     'idusuario' => $idusuario,
                     'party' => $party,
+                    'mensaje'=>$mensaje,
 
                 ]
             );

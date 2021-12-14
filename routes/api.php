@@ -30,7 +30,7 @@ Route::delete('Usuarios/{id}', [UsuarioController::class, "DeleteUsuarios"]);//
 Route::post('nuevaparty', [PartyController::class, "nuevaparty"]);//funciona pero sin las relaciones
 Route::get('nuevaparty', [PartyController::class, "showAllparty"]);//
 Route::get('nuevaparty/{id}', [PartyController::class, "showpartyByID"]);//
-Route::delete('nuevaparty/{id}', [PartyController::class, "Deleteparty"]);
+Route::delete('nuevaparty/{id}', [PartyController::class, "Deleteparty"]);//
 Route::put('nuevaparty/{id}', [PartyController::class, "Updateteparty"]);
 //JUEGO--todos
 Route::post('juego', [JuegoController::class, "createJuego"]);//
