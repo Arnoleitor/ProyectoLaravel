@@ -96,4 +96,36 @@ public function Deleteparty($id){
 
         }
     }
+    public function Updateteparty (Request $request,$id){
+
+           
+            
+        $nombre = $request->input('nombre');
+        $idusuario = $request->input('idusuario');
+        $idjuego = $request->input('idjuego');
+       
+
+
+        try {
+         
+            $Party = Party::where('id', '=', $id)
+            ->update(
+                [
+                    'nombre' => $nombre,
+                    'idusuario' => $idusuario,
+                    'idjuego' => $idjuego,
+                   
+                ]
+                );
+                return Party::all()
+                ->where('id', "=", $id);
+
+        } catch (QueryException $error) {
+         
+            $codigoError = $error->errorInfo[1];
+            if($codigoError){
+                return "Error $codigoError";
+            }
+        }
+    }
 }
