@@ -69,7 +69,7 @@ class JuegoController extends Controller
         }
 
         //ACTUALIZAR JUEGOS//
-        public function updateJuego (Request $request,$id){
+        public function updateJuego ($id){
 
             $id = $request->input('id');
             $nombre = $request->input('email');
