@@ -55,9 +55,9 @@ class UsuarioController extends Controller
         
     }
    ////////////////Modificar Usuarios////////////////
-    public function UpdateUsuarios (Request $request){
+    public function UpdateUsuarios (Request $request,$id){
 
-        $id = $request->input('id');
+       
         $email = $request->input('email');
         $nombre = $request->input('nombre');
         $password = $request->input('password');
