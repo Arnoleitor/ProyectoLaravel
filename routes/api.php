@@ -20,11 +20,12 @@ use App\Http\Controllers\MensajeController;
 // Route::middleware('auth:sanctum')->get('/usuario', function (Request $request) {
 //     return $request->usuario();
 // });
+
 //USUARIOS
 Route::get('Usuarios', [UsuarioController::class, "showAllUsuario"]);//
 Route::post('Usuarios', [UsuarioController::class, "addUsuarios"]);//
 Route::get('Usuarios/{id}', [UsuarioController::class, "UsuariosByID"]);//
-Route::put('Usuarios/{id}', [UsuarioController::class, "UpdateUsuarios"]);//metiendo id en cuerpo
+Route::put('Usuarios/{id}', [UsuarioController::class, "UpdateUsuarios"]);//
 Route::delete('Usuarios/{id}', [UsuarioController::class, "DeleteUsuarios"]);//
 //PARTYS --getall,byid del usuario,delete
 Route::post('nuevaparty', [PartyController::class, "nuevaparty"]);//funciona pero sin las relaciones
