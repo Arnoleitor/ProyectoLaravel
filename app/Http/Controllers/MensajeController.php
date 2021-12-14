@@ -20,7 +20,7 @@ class MensajeController extends Controller
             return Mensaje::create(
                 [
                     'idusuario' => $idusuario,
-                    'party' => $party,
+                    'idparty' => $idparty,
                     'mensaje'=>$mensaje,
 
                 ]
