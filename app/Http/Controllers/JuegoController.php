@@ -98,8 +98,40 @@ class JuegoController extends Controller
                     return "Error $codigoError";
                 }
     
+                    
+            }
+            
+        }
+        public function deletejuego($id){
+
+            try {
+                $arrayJuego = Juego::all()
+                ->where('id', '=', $id);
+    
+                $Juego = Juego::where('id', '=', $id);
+                
+                if (count($arrayJuego) == 0) {
+                    return response()->json([
+                        "data" => $arrayJuego,
+                        "message" => "No se ha encontrado el Juego"
+                    ]);
+                }else{
+                    $Juego->delete();
+                    return response()->json([
+                        "data" => $arrayJuego,
+                        "message" => "Juego borrado correctamente"
+                    ]);
+                }
+    
+            } catch (QueryException $error) {
+    
+                $codigoError = $error->errorInfo[1];
+                if($codigoError){
+                    return "Error $codigoError";
+                }
             }
         }
-}
+
+    }
 
 
