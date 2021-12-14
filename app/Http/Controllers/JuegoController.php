@@ -73,10 +73,10 @@ class JuegoController extends Controller
 
             echo('1');
             
-            $nombre = $request->input('email');
+            $nombre = $request->input('nombre');
             $compania = $request->input('compania');
             $descripcion = $request->input('descripcion');
-            echo("variableeeeeeeeeeeeeeeeeee $nombre, $compania, $descripcion,$id");
+            echo("variableeeeeeeeeeeeeeeeeee $nombre, $compania, $descripcion,$id dddddddddd");
     
     
             try {
