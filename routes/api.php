@@ -24,14 +24,14 @@ use App\Http\Controllers\MensajeController;
 Route::get('Usuarios', [UsuarioController::class, "showAllUsuario"]);//
 Route::post('Usuarios', [UsuarioController::class, "addUsuarios"]);//
 Route::get('Usuarios/{id}', [UsuarioController::class, "UsuariosByID"]);//
-Route::put('Usuarios', [UsuarioController::class, "UpdateUsuarios"]);//metiendo id en cuerpo
+Route::put('Usuarios/{id}', [UsuarioController::class, "UpdateUsuarios"]);//metiendo id en cuerpo
 Route::delete('Usuarios/{id}', [UsuarioController::class, "DeleteUsuarios"]);//
 //PARTYS --getall,byid del usuario,delete
 Route::post('nuevaparty', [PartyController::class, "nuevaparty"]);//funciona pero sin las relaciones
 Route::get('nuevaparty', [PartyController::class, "showAllparty"]);//
 Route::get('nuevaparty/{id}', [PartyController::class, "showpartyByID"]);//
 Route::delete('nuevaparty/{id}', [PartyController::class, "Deleteparty"]);//
-Route::put('nuevaparty/{id}', [PartyController::class, "Updateteparty"]);
+Route::put('nuevaparty/{id}', [PartyController::class, "Updateteparty"]);//
 //JUEGO--todos
 Route::post('juego', [JuegoController::class, "createJuego"]);//
 Route::get('juego', [JuegoController::class, "showAllJuego"]);//
