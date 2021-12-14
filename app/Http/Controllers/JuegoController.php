@@ -75,7 +75,7 @@ class JuegoController extends Controller
             $nombre = $request->input('email');
             $compania = $request->input('compania');
             $descripcion = $request->input('descripcion');
-            echo("$nombre, $compania, $decscripcion, $id");
+            echo("variableeeeeeeeeeeeeeeeeee $nombre, $compania, $decscripcion, $id");
     
     
             try {
