@@ -29,7 +29,7 @@ Route::delete('Usuarios/{id}', [UsuarioController::class, "DeleteUsuarios"]);//
 //PARTYS --getall,byid del usuario,delete
 Route::post('nuevaparty', [PartyController::class, "nuevaparty"]);//funciona pero sin las relaciones
 Route::get('nuevaparty', [PartyController::class, "showAllparty"]);
-Route::get('nuevaparty/{id}', [PartyController::class, "showpartyByID"]);
+Route::get('nuevaparty/{id}', [PartyController::class, "showpartyByID"]);//
 Route::delete('nuevaparty/{id}', [PartyController::class, "Deleteparty"]);
 Route::put('nuevaparty/{id}', [PartyController::class, "Updateteparty"]);
 //JUEGO--todos

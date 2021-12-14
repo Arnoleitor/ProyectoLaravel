@@ -55,5 +55,14 @@ class PartyController extends Controller
     }
     
 }
+    public function showAllparty(){
+    
+    try {
+        
+    return Party::all();
 
+    } catch(QueryException $error) {
+        return $error;
+    }
+}
 }
