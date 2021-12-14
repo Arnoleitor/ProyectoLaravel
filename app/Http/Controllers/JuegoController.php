@@ -72,10 +72,11 @@ class JuegoController extends Controller
         public function updateJuego (Request $request,$id){
 
             echo('1');
+            
             $nombre = $request->input('email');
             $compania = $request->input('compania');
             $descripcion = $request->input('descripcion');
-            echo("variableeeeeeeeeeeeeeeeeee $nombre, $compania, $decscripcion, $id");
+            echo("variableeeeeeeeeeeeeeeeeee $nombre, $compania, $descripcion,$id");
     
     
             try {
