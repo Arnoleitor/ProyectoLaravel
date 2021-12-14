@@ -12,6 +12,7 @@ class PartyController extends Controller
     //
     public function nuevaparty (Request $request){
 
+        
         $nombre = $request->input('nombre');
         $idusuario = $request->input('idusuario');
         $idjuego = $request->input('idjuego');
