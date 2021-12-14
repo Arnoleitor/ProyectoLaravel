@@ -71,16 +71,16 @@ class JuegoController extends Controller
         //ACTUALIZAR JUEGOS//
         public function updateJuego (Request $request,$id){
 
-            echo('1');
+           
             
             $nombre = $request->input('nombre');
             $compania = $request->input('compania');
             $descripcion = $request->input('descripcion');
-            echo("variableeeeeeeeeeeeeeeeeee $nombre, $compania, $descripcion,$id dddddddddd");
+           
     
     
             try {
-                echo('2');
+             
                 $Juego = Juego::where('id', '=', $id)
                 ->update(
                     [
@@ -94,7 +94,7 @@ class JuegoController extends Controller
                     ->where('id', "=", $id);
     
             } catch (QueryException $error) {
-                echo('3');
+             
                 $codigoError = $error->errorInfo[1];
                 if($codigoError){
                     return "Error $codigoError";
