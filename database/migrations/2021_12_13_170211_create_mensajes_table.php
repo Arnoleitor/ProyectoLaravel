@@ -13,7 +13,7 @@ class CreateMensajeTable extends Migration
      */
     public function up()
     {
-        Schema::create('mensaje', function (Blueprint $table) {
+        Schema::create('mensajes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('idusuario',20);
             $table->string('idparty',20);
@@ -49,6 +49,6 @@ class CreateMensajeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mensaje');
+        Schema::dropIfExists('mensajes');
     }
 }
