@@ -13,4 +13,14 @@ class Party extends Model
         'nombre', 'idusuario', 'idjuego'
 
     ];
+    public function juegos()
+    {
+        return $this->belongsTo(Juego::class);
+    }
+    
+    // // public function messages()
+    // // {
+    // //     return $this->hasMany(Message::class);
+    // }
+
 }
