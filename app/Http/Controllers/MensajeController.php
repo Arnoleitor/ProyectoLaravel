@@ -7,7 +7,7 @@ use App\Models\Mensaje;
 
 class MensajeController extends Controller
 {
-    
+    //crear mensajes
     public function createMensaje (Request $request){
 
         $idusuario = $request->input('idusuario');
@@ -36,5 +36,23 @@ class MensajeController extends Controller
             }
            
         }
+    }
+    //ver mensajes por id
+    public function MensajebyID($id){
+
+
+        try {
+            $Mensaje = Mensaje::all()
+            ->where('id', "=", $id);
+            return $Mensaje;
+    
+        } catch (QueryException $error) {
+    
+            $codigoError = $error->errorInfo[1];
+            if($codigoError){
+                return "Error $codigoError";
+            }
+        }
+        
     }
 }

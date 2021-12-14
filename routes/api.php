@@ -39,6 +39,6 @@ Route::get('juego/{id}', [JuegoController::class, "showJuegoByID"]);//
 Route::put('juego/{id}', [JuegoController::class, "updateJuego"]);
 Route::delete('juego/{id}', [JuegoController::class, "deleteJuego"]);//
 //MENSAJES--delete--getbyid buscar por id party
-Route::post('createMensaje', [MensajeController::class, "createMensaje"]);
+Route::post('createMensaje', [MensajeController::class, "createMensaje"]);//
 Route::delete('createMensaje', [MensajeController::class, "deleteMensaje"]);
-Route::get('createMensaje', [MensajeController::class, "MensajebyID"]);
+Route::get('createMensaje/{id}', [MensajeController::class, "MensajebyID"]);
