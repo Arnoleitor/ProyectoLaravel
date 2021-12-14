@@ -38,5 +38,22 @@ class PartyController extends Controller
             
         }
 }
+    public function showpartyByID($id){
+
+
+    try {
+        $Party = Party::all()
+        ->where('id', "=", $id);
+        return $Party;
+
+    } catch (QueryException $error) {
+
+        $codigoError = $error->errorInfo[1];
+        if($codigoError){
+            return "Error $codigoError";
+        }
+    }
+    
+}
 
 }
