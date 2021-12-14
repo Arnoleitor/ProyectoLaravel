@@ -102,7 +102,10 @@ class JuegoController extends Controller
             }
             
         }
-        public function deletejuego($id){
+
+        
+        //BORRAR JUEGOS//
+        public function deleteJuego($id){
 
             try {
                 $arrayJuego = Juego::all()

@@ -21,21 +21,21 @@ use App\Http\Controllers\MensajeController;
 //     return $request->usuario();
 // });
 //USUARIOS
-Route::get('Usuarios', [UsuarioController::class, "showAllUsuario"]);
-Route::post('Usuarios', [UsuarioController::class, "addUsuarios"]);
-Route::get('Usuarios/{id}', [UsuarioController::class, "UsuariosByID"]);
-Route::put('Usuarios', [UsuarioController::class, "UpdateUsuarios"]);
-Route::delete('Usuarios/{id}', [UsuarioController::class, "DeleteUsuarios"]);
+Route::get('Usuarios', [UsuarioController::class, "showAllUsuario"]);//
+Route::post('Usuarios', [UsuarioController::class, "addUsuarios"]);//
+Route::get('Usuarios/{id}', [UsuarioController::class, "UsuariosByID"]);//
+Route::put('Usuarios', [UsuarioController::class, "UpdateUsuarios"]);//metiendo id en cuerpo
+Route::delete('Usuarios/{id}', [UsuarioController::class, "DeleteUsuarios"]);//
 //PARTYS --getall,byid del usuario,delete
-Route::post('nuevaparty', [PartyController::class, "nuevaparty"]);
+Route::post('nuevaparty', [PartyController::class, "nuevaparty"]);//funciona pero sin las relaciones
 Route::get('nuevaparty', [PartyController::class, "showAllparty"]);
 Route::get('nuevaparty/{id}', [PartyController::class, "showpartyByID"]);
 Route::delete('nuevaparty/{id}', [PartyController::class, "Deleteparty"]);
 Route::put('nuevaparty/{id}', [PartyController::class, "Updateteparty"]);
 //JUEGO--todos
-Route::post('juego', [JuegoController::class, "createJuego"]);
-Route::get('juego', [JuegoController::class, "showAllJuego"]);
-Route::get('juego/{id}', [JuegoController::class, "showJuegoByID"]);
+Route::post('juego', [JuegoController::class, "createJuego"]);//
+Route::get('juego', [JuegoController::class, "showAllJuego"]);//
+Route::get('juego/{id}', [JuegoController::class, "showJuegoByID"]);//
 Route::put('juego/{id}', [JuegoController::class, "updateJuego"]);
 Route::delete('juego', [JuegoController::class, "deleteJuego"]);
 //MENSAJES--delete--getbyid buscar por id party
