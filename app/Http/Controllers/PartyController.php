@@ -65,4 +65,35 @@ class PartyController extends Controller
         return $error;
     }
 }
+
+public function Deleteparty($id){
+
+    try {
+        $arrayParty = Party::all()
+        ->where('id', '=', $id);
+
+        $Party = Party::where('id', '=', $id);
+        
+        if (count($arrayParty) == 0) {
+            return response()->json([
+                "data" => $arrayParty,
+                "message" => "No se ha encontrado el Party"
+            ]);
+        }else{
+            $Party->delete();
+            return response()->json([
+                "data" => $arrayParty,
+                "message" => "Party borrado correctamente"
+            ]);
+        }
+
+    } catch (QueryException $error) {
+
+        $codigoError = $error->errorInfo[1];
+        if($codigoError){
+            return "Error $codigoError";
+            }
+
+        }
+    }
 }
