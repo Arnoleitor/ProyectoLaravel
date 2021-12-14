@@ -55,4 +55,33 @@ class MensajeController extends Controller
         }
         
     }
-}
+    public function deleteMensaje($id){
+
+        try {
+            $arrayMensaje = Mensaje::all()
+            ->where('id', '=', $id);
+
+            $Mensaje = Mensaje::where('id', '=', $id);
+            
+            if (count($arrayMensaje) == 0) {
+                return response()->json([
+                    "data" => $arrayMensaje,
+                    "message" => "No se ha encontrado el Mensaje"
+                ]);
+            }else{
+                $Mensaje->delete();
+                return response()->json([
+                    "data" => $arrayMensaje,
+                    "message" => "Mensaje borrado correctamente"
+                ]);
+            }
+
+        } catch (QueryException $error) {
+
+            $codigoError = $error->errorInfo[1];
+            if($codigoError){
+                return "Error $codigoError";
+            }
+            }
+        }
+    }
