@@ -16,4 +16,8 @@ class Mensaje extends Model
     {
         return $this->belongsTo(Party::class);
     }
+    public function usuarios()
+    {
+        return $this->belongsTo(Usuario::class);
+    }
 }

@@ -18,4 +18,8 @@ class Usuario extends Model
     {
         return $this->hasMany(Party::class);
     }
+    public function mensajes()
+    {
+        return $this->hasMany(Mensaje::class);
+    }
 }
