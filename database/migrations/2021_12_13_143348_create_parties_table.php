@@ -18,6 +18,7 @@ class CreatePartiesTable extends Migration
             $table->increments('id');
             $table->string('nombre',100);
             $table->string('idusuario',100);
+            $table->string('idjuego',100);
 
             // $table->unsignedInteger('idjuego');
             // $table->foreign('idjuego')
