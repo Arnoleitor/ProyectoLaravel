@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMensajeTable extends Migration
+class CreateMensajesTable extends Migration
 {
     /**
      * Run the migrations.

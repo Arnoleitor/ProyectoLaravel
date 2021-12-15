@@ -12,4 +12,8 @@ class Mensaje extends Model
         'idusuario', 'idparty', 'mensaje',
 
     ];
+    public function parties()
+    {
+        return $this->belongsTo(Party::class);
+    }
 }
