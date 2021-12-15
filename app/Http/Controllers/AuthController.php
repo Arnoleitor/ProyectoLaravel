@@ -14,30 +14,30 @@ class AuthController extends Controller
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
     public function userRegister(Request $request)
     {
-        $this->validate($request, [
-            'nombre' => 'required|min:4',
-            'email' => 'required|email',
-            'password' => 'required|min:8',
-            'role' => 'required|min:4',
-        ]);
+        // $this->validate($request, [
+        //     'nombre' => 'required|min:4',
+        //     'email' => 'required|email',
+        //     'password' => 'required|min:8',
+        //     'role' => 'required|min:4',
+        // ]);
 
-        $user = Usuario::create([
-            'nombre' => $request->nombre,
-            'email' => $request->email,
-            'password' => bcrypt($request->password),
-            'role' => $request->role,
-            'tipo' => $request->tipo,
-            'raza' => $request->raza,
-            'edad' => $request->edad,
-            'localidad' => $request->localidad
+        // $user = Usuario::create([
+        //     'nombre' => $request->nombre,
+        //     'email' => $request->email,
+        //     'password' => bcrypt($request->password),
+        //     'role' => $request->role,
+        //     'tipo' => $request->tipo,
+        //     'raza' => $request->raza,
+        //     'edad' => $request->edad,
+        //     'localidad' => $request->localidad
          
-        ]);
+        // ]);
 
         $token = $user->createToken('LaravelAuthApp')->accessToken;
 
         return response()->json([
             'token' => $token,
-            'user' => $user
+            'user' => "arnold"
         ], 200);
     }
 
