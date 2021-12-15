@@ -84,4 +84,14 @@ class MensajeController extends Controller
             }
             }
         }
+        public function showAllMensaje(){
+    
+            try {
+                
+            return Mensaje::all();
+    
+            } catch(QueryException $error) {
+                return $error;
+            }
+        }
     }

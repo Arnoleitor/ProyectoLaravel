@@ -43,3 +43,4 @@ Route::delete('Juego/{id}', [JuegoController::class, "deleteJuego"]);//
 Route::post('Mensaje', [MensajeController::class, "createMensaje"]);//
 Route::delete('Mensaje/{id}', [MensajeController::class, "deleteMensaje"]);//
 Route::get('Mensaje/{id}', [MensajeController::class, "MensajebyID"]);//
+Route::get('Mensaje', [MensajeController::class, "showAllMensaje"]);//
