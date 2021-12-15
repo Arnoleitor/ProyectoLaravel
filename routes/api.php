@@ -22,24 +22,24 @@ use App\Http\Controllers\MensajeController;
 // });
 
 //USUARIOS
-Route::get('Usuarios', [UsuarioController::class, "showAllUsuario"]);//
-Route::post('Usuarios', [UsuarioController::class, "addUsuarios"]);//
-Route::get('Usuarios/{id}', [UsuarioController::class, "UsuariosByID"]);//
-Route::put('Usuarios/{id}', [UsuarioController::class, "UpdateUsuarios"]);//
-Route::delete('Usuarios/{id}', [UsuarioController::class, "DeleteUsuarios"]);//
+Route::get('Usuario', [UsuarioController::class, "showAllUsuario"]);//
+Route::post('Usuario', [UsuarioController::class, "addUsuarios"]);//
+Route::get('Usuario/{id}', [UsuarioController::class, "UsuariosByID"]);//
+Route::put('Usuario/{id}', [UsuarioController::class, "UpdateUsuarios"]);//
+Route::delete('Usuario/{id}', [UsuarioController::class, "DeleteUsuarios"]);//
 //PARTYS --getall,byid del usuario,delete
-Route::post('nuevaparty', [PartyController::class, "nuevaparty"]);//funciona pero sin las relaciones
-Route::get('nuevaparty', [PartyController::class, "showAllparty"]);//
-Route::get('nuevaparty/{id}', [PartyController::class, "showpartyByID"]);//
-Route::delete('nuevaparty/{id}', [PartyController::class, "Deleteparty"]);//
-Route::put('nuevaparty/{id}', [PartyController::class, "Updateteparty"]);//
+Route::post('Party', [PartyController::class, "nuevaparty"]);//funciona pero sin las relaciones
+Route::get('Party', [PartyController::class, "showAllparty"]);//
+Route::get('party/{id}', [PartyController::class, "showpartyByID"]);//
+Route::delete('Party/{id}', [PartyController::class, "Deleteparty"]);//
+Route::put('Party/{id}', [PartyController::class, "Updateteparty"]);//
 //JUEGO--todos
-Route::post('juego', [JuegoController::class, "createJuego"]);//
-Route::get('juego', [JuegoController::class, "showAllJuego"]);//
-Route::get('juego/{id}', [JuegoController::class, "showJuegoByID"]);//
-Route::put('juego/{id}', [JuegoController::class, "updateJuego"]);//
-Route::delete('juego/{id}', [JuegoController::class, "deleteJuego"]);//
+Route::post('Juego', [JuegoController::class, "createJuego"]);//
+Route::get('Juego', [JuegoController::class, "showAllJuego"]);//
+Route::get('Juego/{id}', [JuegoController::class, "showJuegoByID"]);//
+Route::put('Juego/{id}', [JuegoController::class, "updateJuego"]);//
+Route::delete('Juego/{id}', [JuegoController::class, "deleteJuego"]);//
 //MENSAJES--delete--getbyid buscar por id party
-Route::post('createMensaje', [MensajeController::class, "createMensaje"]);//
-Route::delete('createMensaje/{id}', [MensajeController::class, "deleteMensaje"]);//
-Route::get('createMensaje/{id}', [MensajeController::class, "MensajebyID"]);//
+Route::post('Mensaje', [MensajeController::class, "createMensaje"]);//
+Route::delete('Mensaje/{id}', [MensajeController::class, "deleteMensaje"]);//
+Route::get('Mensaje/{id}', [MensajeController::class, "MensajebyID"]);//
