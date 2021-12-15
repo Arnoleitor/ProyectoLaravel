@@ -12,8 +12,8 @@ class Juego extends Model
         'nombre', 'compania', 'descripcion'
 
     ];
-    // public function parties()
-    // {
-    //     return $this->hasMany(Party::class);
-    // }
+    public function parties()
+    {
+        return $this->hasMany(Party::class);
+    }
 }
