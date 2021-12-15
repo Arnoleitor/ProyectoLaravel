@@ -23,9 +23,6 @@ class CreateMensajesTable extends Migration
             ->constrained('usuarios')
             ->onUpdate('cascade')
             ->onDelete('cascade');
-            
-
-            // $table->string('idparty',20);
             $table->string('mensaje',200);
 
             //////////////////Esto es para conectar con mensajes/////////////////////           
@@ -36,33 +33,10 @@ class CreateMensajesTable extends Migration
             ->unsigned()
             ->constrained('parties')
             ->onUpdate('cascade')
-            ->onDelete('cascade');
-            
-
-
-            
+            ->onDelete('cascade');    
             $table->timestamps();
 
-
-            // $table->increments('id');
-            // $table->unsignedInteger('idusuario');
-            // $table->foreign('idusuario')
-            // ->references('id')
-            // ->on('usuarios')
-            // ->unsigned()
-            // ->constrained('usuarios')
-            // ->onUpdate('cascade')
-            // ->onDelete('cascade');
-            // $table->unsignedInteger('idparty');
-            // $table->foreign('idparty')
-            // ->references('id')
-            // ->on('parties')
-            // ->unsigned()
-            // ->constrained('parties')
-            // ->onUpdate('cascade')
-            // ->onDelete('cascade');
-            // $table->string('mensaje',200);
-            // $table->timestamps();
+            
         });
     }
 
