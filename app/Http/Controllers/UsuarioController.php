@@ -24,6 +24,7 @@ class UsuarioController extends Controller
         $email = $request->input('email');
         $nombre = $request->input('nombre');
         $password = $request->input('password');
+        $role = $request->input('role');
         $tipo = $request->input('tipo');
         $raza = $request->input('raza');
         $edad = $request->input('edad');
@@ -35,6 +36,7 @@ class UsuarioController extends Controller
                 [
                     'email' => $email,
                     'nombre' => $nombre,
+                    'role' => $role,
                     'password' => $password,
                     'tipo' => $tipo,
                     'raza' => $raza,
