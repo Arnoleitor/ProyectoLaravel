@@ -18,7 +18,21 @@ class CreateMensajesTable extends Migration
             $table->string('idusuario',20);
             $table->string('idparty',20);
             $table->string('mensaje',200);
+
+            // $table->unsignedInteger('idmensaje');
+            // $table->foreign('idjuego')
+            // ->references('id')
+            // ->on('juegos')
+            // ->unsigned()
+            // ->constrained('juegos')
+            // ->onUpdate('cascade')
+            // ->onDelete('cascade');
+            
+
+
+            
             $table->timestamps();
+
 
             // $table->increments('id');
             // $table->unsignedInteger('idusuario');

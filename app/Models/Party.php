@@ -10,7 +10,7 @@ class Party extends Model
     use HasFactory;
     
     protected $fillable = [
-        'nombre', 'idusuario', 'idjuego'
+        'nombre', 'idusuario', 'idjuego',
 
     ];
     public function juegos()

@@ -9,7 +9,7 @@ class Mensaje extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'idusuario', 'idparty', 'mensaje',
+        'idusuario', 'idparty', 'mensaje'
 
     ];
     public function parties()
