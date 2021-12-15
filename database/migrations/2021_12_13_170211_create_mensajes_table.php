@@ -16,12 +16,12 @@ class CreateMensajesTable extends Migration
         Schema::create('mensajes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('idusuario',20);
-            $table->string('idparty',20);
+            // $table->string('idparty',20);
             $table->string('mensaje',200);
 
             //////////////////Esto es para conectar con mensajes/////////////////////           
-            $table->unsignedInteger('idparties');
-            $table->foreign('idparties')
+            $table->unsignedInteger('idparty');
+            $table->foreign('idparty')
             ->references('id')
             ->on('parties')
             ->unsigned()
