@@ -20,6 +20,11 @@ use App\Http\Controllers\MensajeController;
 // Route::middleware('auth:sanctum')->get('/usuario', function (Request $request) {
 //     return $request->usuario();
 // });
+//Registro
+Route::post('newUser', [AuthController::class, "userRegister"]);
+//login
+Route::post('loginUser', [AuthController::class, "userLogin"]);
+//midelware
 
 //USUARIOS
 Route::get('Usuario', [UsuarioController::class, "showAllUsuario"]);//
