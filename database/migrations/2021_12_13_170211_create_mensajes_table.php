@@ -18,9 +18,9 @@ class CreateMensajesTable extends Migration
             $table->unsignedInteger('idusuario');
             $table->foreign('idusuario')
             ->references('id')
-            ->on('usuarios')
+            ->on('users')
             ->unsigned()
-            ->constrained('usuarios')
+            ->constrained('users')
             ->onUpdate('cascade')
             ->onDelete('cascade');
             $table->string('mensaje',200);
