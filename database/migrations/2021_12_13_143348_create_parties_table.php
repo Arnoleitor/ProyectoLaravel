@@ -29,6 +29,16 @@ class CreatePartiesTable extends Migration
             ->onUpdate('cascade')
             ->onDelete('cascade');
 
+//////////////////Esto es para conectar con la id de usuarios/////////////////////
+            $table->unsignedInteger('idusuario');
+            $table->foreign('idusuario')
+            ->references('id')
+            ->on('usuarios')
+            ->unsigned()
+            ->constrained('usuarios')
+            ->onUpdate('cascade')
+            ->onDelete('cascade');
+
 
             $table->timestamps();
         });

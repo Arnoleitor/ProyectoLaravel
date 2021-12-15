@@ -13,4 +13,9 @@ class Usuario extends Model
         'email', 'nombre', 'password','tipo', 'raza', 'edad','localidad'
 
     ];
+
+    public function parties()
+    {
+        return $this->hasMany(Party::class);
+    }
 }
