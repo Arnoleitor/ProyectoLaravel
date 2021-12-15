@@ -4,15 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Database\QueryException;
-use App\Models\Usuario;
-class UsuarioController extends Controller
+use App\Models\User;
+class UserController extends Controller
 {
     //
     public function showAllUsuario(){
 
         try {
             
-        return Usuario::all();
+        return User::all();
 
         } catch(QueryException $error) {
             return $error;
@@ -32,7 +32,7 @@ class UsuarioController extends Controller
 
         try {
 
-            return Usuario::create(
+            return User::create(
                 [
                     'email' => $email,
                     'nombre' => $nombre,
@@ -71,7 +71,7 @@ class UsuarioController extends Controller
 
         try {
 
-            $Usuario = Usuario::where('id', '=', $id)
+            $Usuario = User::where('id', '=', $id)
             ->update(
                 [
                     'email' => $email,
@@ -83,7 +83,7 @@ class UsuarioController extends Controller
                     'localidad' => $localidad,
                 ]
                 );
-                return Usuario::all()
+                return User::all()
                 ->where('id', "=", $id);
 
         } catch (QueryException $error) {
@@ -100,7 +100,7 @@ class UsuarioController extends Controller
 
 
         try {
-            $Usuario = Usuario::all()
+            $Usuario = User::all()
             ->where('id', "=", $id);
             return $Usuario;
 
@@ -121,10 +121,10 @@ class UsuarioController extends Controller
 
         try {
     ////////////////BUSCA EL PLAYER POR ID. SI EXISTE, BORRA EL PLAYER. SI NO, SACA MENSAJE DE ERROR////////////////
-            $arrayUsuario = Usuario::all()
+            $arrayUsuario = User::all()
             ->where('id', '=', $id);
 
-            $Usuario = Usuario::where('id', '=', $id);
+            $Usuario = User::where('id', '=', $id);
             
             if (count($arrayUsuario) == 0) {
                 return response()->json([

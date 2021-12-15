@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\PartyController;
 use App\Http\Controllers\JuegoController;
 use App\Http\Controllers\MensajeController;
@@ -28,11 +28,11 @@ Route::post('loginUser', [AuthController::class, "userLogin"]);
 //midelware
 
 //USUARIOS
-Route::get('Usuario', [UsuarioController::class, "showAllUsuario"]);//
-Route::post('Usuario', [UsuarioController::class, "addUsuarios"]);//
-Route::get('Usuario/{id}', [UsuarioController::class, "UsuariosByID"]);//
-Route::put('Usuario/{id}', [UsuarioController::class, "UpdateUsuarios"]);//
-Route::delete('Usuario/{id}', [UsuarioController::class, "DeleteUsuarios"]);//
+Route::get('Usuario', [UserController::class, "showAllUsuario"]);//
+Route::post('Usuario', [UserController::class, "addUsuarios"]);//
+Route::get('Usuario/{id}', [UserController::class, "UsuariosByID"]);//
+Route::put('Usuario/{id}', [UserController::class, "UpdateUsuarios"]);//
+Route::delete('Usuario/{id}', [UserController::class, "DeleteUsuarios"]);//
 //PARTYS --getall,byid del usuario,delete
 Route::post('Party', [PartyController::class, "nuevaparty"]);//funciona pero sin las relaciones
 Route::get('Party', [PartyController::class, "showAllparty"]);//

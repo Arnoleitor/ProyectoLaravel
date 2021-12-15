@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Database\QueryException;
 
-use App\Models\Usuario;
+use App\Models\User;
 
 class AuthController extends Controller
 {
@@ -21,7 +21,7 @@ class AuthController extends Controller
             'role' => 'required|min:4',
         ]);
 
-        $user = Usuario::create([
+        $user = User::create([
             'nombre' => $request->nombre,
             'email' => $request->email,
             'password' => bcrypt($request->password),
