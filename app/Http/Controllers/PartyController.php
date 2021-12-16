@@ -9,7 +9,7 @@ use App\Models\Party;
 class PartyController extends Controller
 
 {
-    //
+    //CREAR NUEVAS PARTIES
     public function nuevaparty (Request $request){
 
         
@@ -38,6 +38,8 @@ class PartyController extends Controller
             
         }
 }
+
+    //BUSCAR PARTIES POR ID
     public function showpartyByID($id){
 
 
@@ -55,6 +57,7 @@ class PartyController extends Controller
     }
     
 }
+    //BUSCAR TODAS LAS PARTIES
     public function showAllparty(){
     
     try {
@@ -65,7 +68,7 @@ class PartyController extends Controller
         return $error;
     }
 }
-
+    //BORRAR PARTIES POR ID
 public function Deleteparty($id){
 
     try {
@@ -96,6 +99,7 @@ public function Deleteparty($id){
 
         }
     }
+    //ACTUALIZAR PARTIES POR ID
     public function Updateteparty (Request $request,$id){
 
            

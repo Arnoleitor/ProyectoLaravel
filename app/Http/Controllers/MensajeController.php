@@ -37,7 +37,7 @@ class MensajeController extends Controller
            
         }
     }
-    //ver mensajes por id
+    //BUSCAR MENSAJES POR ID
     public function MensajebyID($id){
 
 
@@ -55,6 +55,7 @@ class MensajeController extends Controller
         }
         
     }
+    //BORRAR MENSAJES POR ID
     public function deleteMensaje($id){
 
         try {
@@ -84,6 +85,7 @@ class MensajeController extends Controller
             }
             }
         }
+        //VER TODOS LOS MENSAJES
         public function showAllMensaje(){
     
             try {

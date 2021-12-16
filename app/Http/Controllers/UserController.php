@@ -120,7 +120,7 @@ class UserController extends Controller
         
 
         try {
-    ////////////////BUSCA EL PLAYER POR ID. SI EXISTE, BORRA EL PLAYER. SI NO, SACA MENSAJE DE ERROR////////////////
+    ////////////////BUSCA EL PLAYER POR ID////////////////
             $arrayUsuario = User::all()
             ->where('id', '=', $id);
 
@@ -149,33 +149,3 @@ class UserController extends Controller
     }
 }
     
-// public function showProfile(Request $request){
-
-//     $id = $request->input('id');
-
-//     try {
-
-//         return Usuario::all()->where('id', '=', $id)
-//         ->makeHidden(['password'])->keyBy('id');
-
-//     } catch (QueryException $error) {
-//         return $error;
-//     }
-// }
-
-// public function registerUser(Request $request){
-
-//     $validatedData = $request->validate([
-//         'email' => 'required|email',
-//         'nombre' => 'required|string',
-//         'password' => 'required|min:8',
-//         'tipo' => 'required',
-//         'raza' => 'required',
-//         'edad' => 'required',
-//         'localidad' => 'required|string',
-        
-//     ], [
-//         'name.required' => 'Name is required',
-//         'password.required' => 'Password is required',
-//         'email.required' => 'Email is required'
-//     ]);
