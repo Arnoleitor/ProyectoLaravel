@@ -58,4 +58,6 @@ https://dashboard.heroku.com/apps/aceproyectolaravel
 <h4>GUIA INSTALACIÓN PASSPORT📔</h4>
 
 https://programacionymas.com/blog/api-rest-laravel-passport
+## RELACIONES
+![relaciones](https://user-images.githubusercontent.com/88783560/146391851-fafdf19d-9656-410b-83a7-ca4f5fb12d1d.png)
 
